@@ -71,7 +71,6 @@ function runDots() {
             echo ""
             ./datastores.sh
         fi
-	fi
     done
 
     echo "------------------------------"
