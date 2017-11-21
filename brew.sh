@@ -126,14 +126,14 @@ brew install pandoc
 
 
 # Install Cask
-brew install caskroom/cask/brew-cask
+brew cask
 brew tap caskroom/versions
 
 # Core casks
 brew cask install --appdir="/Applications" alfred
-brew cask install --appdir="~/Applications" iterm2
-brew cask install --appdir="~/Applications" java
-brew cask install --appdir="~/Applications" xquartz
+brew cask install --appdir="/Applications" iterm2
+brew cask install --appdir="/Applications" java
+brew cask install --appdir="/Applications" xquartz
 
 # Development tool casks
 brew cask install --appdir="/Applications" sublime-text
