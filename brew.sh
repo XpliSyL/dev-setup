@@ -21,8 +21,6 @@ brew update
 # Upgrade any already-installed formulae.
 brew upgrade
 
-xcode-select --install
-
 
 # Install GNU core utilities (those that come with OS X are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
@@ -37,7 +35,6 @@ brew install findutils
 brew install gnu-sed --with-default-names
 # Install Bash 4.
 brew install bash
-brew tap homebrew/versions
 brew install bash-completion2
 # We installed the new shell, now we have to activate it
 echo "Adding the newly installed shell to the list of allowed shells"
@@ -47,7 +44,7 @@ sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
 chsh -s /usr/local/bin/bash
 
 # Install `wget` with IRI support.
-brew install wget --with-iri
+brew install wget
 
 # Install Python
 brew install python
@@ -60,12 +57,10 @@ LINE='eval "$(rbenv init -)"'
 grep -q "$LINE" ~/.extra || echo "$LINE" >> ~/.extra
 
 # Install more recent versions of some OS X tools.
-brew install vim --override-system-vi
+brew install vim --with-override-system-vi
 brew install grep
 brew install openssh
 brew install --with-openssl curl
-brew install --with-homebrew-curl php71
-brew install php71-mcrypt
 
 # Install font tools.
 brew tap bramstein/webfonttools
@@ -121,7 +116,6 @@ brew install speedtest_cli
 brew install tree
 brew install webkit2png
 brew install zopfli
-brew install pkg-config libffi
 brew install pandoc
 
 # Lxml and Libxslt
